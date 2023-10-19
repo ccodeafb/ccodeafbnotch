@@ -1,0 +1,9 @@
+1. Conectarnos a excel.
+2. Conectarnos a csv.
+3. Conectarnos a txt.
+4. Conextarnos a json.
+5. Conectarnos a xml.
+6. Conectarnos a un word.
+7. Importar un modelo de datos
+8. Web Scraping (wikipedia y drive). 
+9. SQL SERVER.
