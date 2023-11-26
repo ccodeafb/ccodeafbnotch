@@ -1,0 +1,29 @@
+import pandas as pd
+import numpy as np
+import requests
+import folium 
+import matplotlib.pyplot as plt
+import seaborn
+########################
+
+df = pd.DataFrame({'Day': ['Mon', 'Tue', 'Wed', 'Thur', 'Fri'],
+                   'Morning': [44, 46, 49, 59, 54],
+                   'Evening': [33, 46, 50, 49, 60]})
+
+
+df
+########################
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#set seaborn plotting aesthetics
+sns.set(style='white')
+
+#create stacked bar chart
+df.set_index('Day').plot(kind='bar', stacked=True, color=['black', 'red'])
+
+
+
+
+
