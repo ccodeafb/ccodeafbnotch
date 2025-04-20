@@ -1,0 +1,50 @@
+OPCIÓN 1: Ya tienes el repo clonado
+Si ya tienes la carpeta en tu PC desde antes, simplemente:
+
+bash
+Copiar
+Editar
+cd ruta\de\tu\proyecto
+git pull origin main
+Eso descarga los últimos cambios desde GitHub a tu carpeta local ✅
+
+OPCIÓN 2: Clonar desde cero (si aún no lo tienes en tu PC)
+bash
+Copiar
+Editar
+cd ruta\donde\quieras\guardar\el\proyecto
+git clone https://github.com/tu-usuario/nombre-del-repo.git
+cd nombre-del-repo
+🐳 Y ahora, ¿qué pasa con Docker?
+Cuando haces cambios en .py o cualquier archivo usado por el Dockerfile, necesitas reconstruir la imagen.
+
+Porque Docker no actualiza solo los archivos del contenedor si el código cambia afuera.
+
+🔁 PASOS para reconstruir:
+bash
+Copiar
+Editar
+docker build -t mi_nombre_de_imagen .
+(Eso vuelve a construir con los nuevos archivos actualizados)
+
+Y luego:
+
+bash
+Copiar
+Editar
+docker run -d --name mi_nuevo_contenedor -p 9000:8000 mi_nombre_de_imagen
+O si solo cambiaste cosas y quieres reiniciar el contenedor antiguo:
+
+bash
+Copiar
+Editar
+docker stop contenedor_antiguo
+docker rm contenedor_antiguo
+docker build -t mi_nombre_de_imagen .
+docker run -d --name contenedor_nuevo -p 9000:8000 mi_nombre_de_imagen
+🧼 Mini resumen:
+
+¿Qué cambió?	¿Qué hacer?
+.py, Dockerfile, etc	git pull → docker build → docker run
+Solo modelo .joblib	Igual: debes reconstruir imagen si se copia dentro
+Cambiaste algo en GitHub	Tienes que volver a traerlo (pull o clone)
