@@ -1,0 +1,32 @@
+🧠 Escenario: Ya tenés un repo en GitHub, y estás en una nueva PC
+✅ Paso 1: Clonar el repositorio en tu nueva PC
+Entra a tu repo en GitHub
+
+Hacé clic en el botón verde Code → copiá la URL (HTTPS o SSH, según tu configuración)
+
+En tu terminal (por ejemplo en VSCode o CMD):
+
+
+git clone https://github.com/tuusuario/mi-proyecto.git
+Esto va a crear una carpeta con todo el contenido del repo.
+
+Entrás a la carpeta:
+
+cd mi-proyecto
+✅ Paso 2: Hacés tus cambios en VSCode
+Editás lo que necesites, guardás los archivos como siempre.
+
+✅ Paso 3: Subir los cambios al repo (mismo de siempre)
+
+git status                 # Ver qué cambió
+git add .                  # Agregar todo
+git commit -m "Tu mensaje de cambio"
+git push                   # Subir los cambios
+Y listo, ¡ya actualizaste el repositorio desde tu nueva PC! 🎉
+
+🔐 Consejo: Configurar Git con tu usuario (una sola vez por PC)
+Si todavía no configuraste tu usuario de Git en esta nueva máquina, hacelo así:
+
+
+git config --global user.name "Tu Nombre"
+git config --global user.email "tucorreo@ejemplo.com"

@@ -1,0 +1,135 @@
+Comandos Básicos de Git
+Configuración de Git
+Configurar nombre de usuario
+
+git config --global user.name "Tu Nombre"
+Configura tu nombre que aparecerá en los commits.
+
+Configurar correo electrónico
+
+git config --global user.email "tu_email@example.com"
+Configura tu correo para asociarlo con los commits.
+
+Ver configuración actual
+
+git config --list
+Muestra toda la configuración actual de Git.
+
+Trabajar con Repositorios
+Clonar un repositorio
+
+git clone <URL_del_repositorio>
+Clona un repositorio remoto (como GitHub) a tu máquina local.
+
+Ver el estado del repositorio
+
+git status
+Muestra el estado actual de los archivos: si hay cambios, archivos no rastreados, etc.
+
+Ver configuración remota
+
+git remote -v
+Muestra las URLs remotas asociadas al repositorio (como GitHub).
+
+Trabajo con Archivos
+Agregar archivos al área de preparación (staging)
+
+git add <nombre_del_archivo>
+Añade un archivo específico al área de staging para ser preparado para el commit.
+
+Para agregar todos los archivos modificados:
+
+git add .
+Eliminar un archivo del repositorio
+
+git rm <nombre_del_archivo>
+Elimina un archivo del repositorio y lo marca para ser comprometido.
+
+Ver los archivos modificados
+
+git diff
+Muestra las diferencias entre los archivos modificados y los archivos confirmados (committed).
+
+Commits
+Hacer un commit
+
+git commit -m "Mensaje descriptivo"
+Realiza un commit con los cambios que están en el área de preparación (staging). El mensaje debe describir lo que se ha hecho.
+
+Ver el historial de commits
+
+git log
+Muestra una lista de los commits realizados en el repositorio.
+
+Deshacer el último commit
+
+git reset --soft HEAD~1
+Deshace el último commit, pero mantiene los cambios en el área de preparación (staging).
+
+Sincronización con el Repositorio Remoto (GitHub)
+Subir cambios al repositorio remoto
+
+git push origin main
+Sube los cambios del branch main al repositorio remoto en GitHub (o el nombre de tu rama).
+
+Descargar cambios del repositorio remoto
+
+git pull origin main
+Baja los últimos cambios del repositorio remoto y los fusiona con tu rama actual.
+
+Ver las ramas remotas
+
+git branch -r
+Muestra las ramas remotas disponibles en el repositorio.
+
+Ramas
+Ver las ramas locales
+
+git branch
+Muestra las ramas locales en tu repositorio.
+
+Crear una nueva rama
+
+git branch <nombre_de_rama>
+Crea una nueva rama con el nombre que elijas.
+
+Cambiar a otra rama
+
+git checkout <nombre_de_rama>
+Cambia a la rama especificada.
+
+Crear y cambiar a una nueva rama
+git checkout -b <nombre_de_rama>
+Crea una nueva rama y cambia a ella en un solo paso.
+
+Fusionar una rama en la actual
+
+git merge <nombre_de_rama>
+Fusiona los cambios de otra rama a la rama actual.
+
+Otras Acciones
+Eliminar una rama
+
+git branch -d <nombre_de_rama>
+Elimina una rama local. Si la rama no ha sido fusionada, usa -D para forzar la eliminación.
+
+Ver cambios no confirmados (sin commit)
+
+git diff
+Muestra las diferencias entre el archivo actual y la versión confirmada (commit).
+
+Ver las diferencias entre dos commits
+
+git diff <commit1> <commit2>
+Muestra las diferencias entre dos commits específicos.
+
+Atajos Útiles
+Para ver el estado rápidamente después de un git status:
+
+git diff --stat
+Para revertir cambios en un archivo específico (volver a la última versión confirmada):
+
+git checkout -- <nombre_del_archivo>
+Para ver el historial de commits de forma más resumida:
+
+git log --oneline

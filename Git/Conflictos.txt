@@ -1,0 +1,52 @@
+🚨 ¿Cuándo aparece?
+Normalmente, durante un git pull o un git merge, cuando Git intenta combinar cambios pero no puede hacerlo automáticamente.
+
+Ejemplo típico:
+
+
+git pull origin main
+Y Git te tira algo como:
+
+
+Auto-merging archivo.txt
+CONFLICT (content): Merge conflict in archivo.txt
+Automatic merge failed; fix conflicts and then commit the result.
+🧩 Cómo resolverlo paso a paso
+✅ 1. Abrí los archivos con conflicto
+Git marca el conflicto directamente en el archivo así:
+
+
+<<<<<<< HEAD
+Esta es tu versión local
+=======
+Esta es la versión remota
+>>>>>>> origin/main
+✅ 2. Elegí qué versión conservar
+Podés mantener una, la otra, o combinarlas manualmente.
+
+Eliminá las líneas <<<<<<<, =======, y >>>>>>> después de decidir.
+
+✅ 3. Una vez resuelto, hacé:
+
+git add archivo.txt           # O todos los que editaste
+git commit                    # Git va a usar un mensaje tipo "Merge"
+✅ 4. Listo, seguí trabajando
+Ya podés seguir con:
+
+
+git push
+🛠️ Tips útiles
+Si usás VSCode, te va a mostrar botones como:
+
+Accept Current Change
+
+Accept Incoming Change
+
+Accept Both Changes
+
+Eso hace el trabajo más fácil visualmente.
+
+Podés ver todos los archivos con conflictos con:
+
+
+git status

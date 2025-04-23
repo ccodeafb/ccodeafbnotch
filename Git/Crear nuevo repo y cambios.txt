@@ -1,0 +1,56 @@
+🧩 Parte 1: Subir tu carpeta local a GitHub
+✅ Paso 1: Crear un nuevo repositorio en GitHub
+Ve a https://github.com
+
+Haz clic en New repository
+
+Ponle un nombre (por ejemplo, mi-proyecto)
+
+Opcional: agrega descripción, elige si es público o privado
+
+No marques la opción de "Initialize with a README"
+
+Haz clic en Create repository
+
+GitHub te mostrará una página con instrucciones para conectar tu proyecto.
+
+✅ Paso 2: Inicializar Git en tu carpeta local
+Abre una terminal en VSCode (o PowerShell si estás en Windows) y navega hasta tu carpeta del proyecto:
+
+
+cd ruta\de\tu\carpeta
+Inicializa Git:
+
+
+git init
+Agrega todos los archivos:
+
+git add .
+Haz un commit:
+
+
+git commit -m "Primer commit"
+✅ Paso 3: Vincular tu carpeta al repositorio de GitHub
+Copia la URL del repositorio (algo como https://github.com/tuusuario/mi-proyecto.git)
+
+Conéctalo:
+
+
+git remote add origin https://github.com/tuusuario/mi-proyecto.git
+Sube el código (si es la primera vez, fuerza el push para configurar la rama principal):
+
+
+git branch -M main
+git push -u origin main
+¡Listo! Ya tienes tu proyecto en GitHub.
+
+🔄 Parte 2: Hacer cambios y subirlos a GitHub
+✅ Paso 1: Modifica lo que necesites en tu código con VSCode
+Luego guarda los archivos.
+
+✅ Paso 2: Usa estos comandos:
+
+git status               # (opcional) Ver qué cambió
+git add .                # Agrega todos los cambios
+git commit -m "Describe tu cambio aquí"
+git push                 # Sube los cambios a GitHub
