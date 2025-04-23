@@ -1,0 +1,3 @@
+cd C:/Users/adrih/OneDrive/Desktop/Programacion/Docker/Proyecto1
+docker build -t imagen1 .
+docker run --name contenedor1 -p 8000:8000 imagen1
